@@ -1,12 +1,15 @@
 package me.jaspr.portfolio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +20,28 @@ public class MainActivity extends AppCompatActivity {
         final String name = "Jaspr Wang";
         final Toolbar toolbar =  (Toolbar)findViewById(R.id.toolbar);
         final FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+        final CardView card1 = (CardView)findViewById(R.id.card1);
+        final CardView card2 = (CardView)findViewById(R.id.card2);
+        final CardView card3 = (CardView)findViewById(R.id.card3);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+            }
+        });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+            }
+        });
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

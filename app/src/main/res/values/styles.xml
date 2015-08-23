@@ -17,6 +17,14 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="AppTheme" parent="Base.AppTheme"></style>
+    <style name="AppTheme.Transparent" parent="Base.AppTheme">
+
+    </style>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="android:colorPrimaryDark">@color/orange_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
 
 </resources>
