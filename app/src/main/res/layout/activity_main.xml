@@ -31,6 +31,13 @@
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/gradient"
+                app:layout_collapseMode="parallax"/>
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -69,6 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Info"
+                        android:textColor="@color/orange_primary"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <TextView
@@ -97,6 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Friends"
+                        android:textColor="@color/orange_primary"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <TextView
@@ -125,6 +134,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Related"
+                        android:textColor="@color/orange_primary"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <TextView
