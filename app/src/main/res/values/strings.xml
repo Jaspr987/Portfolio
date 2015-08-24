@@ -9,5 +9,8 @@
   <string name="action_settings">Settings</string>
   <string name="name">Jaspr Wang</string>
   <string name="easter_egg">你们给我搞得这个彩蛋啊</string>
+  <string name="info_title">Info</string>
+  <string name="experiences_title">Experiences</string>
+  <string name="works_title">Works</string>
 
 </resources>
