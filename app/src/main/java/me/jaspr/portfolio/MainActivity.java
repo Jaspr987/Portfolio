@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String name = "Jaspr Wang";
+        final String name = getString(R.string.name);
         final Toolbar toolbar =  (Toolbar)findViewById(R.id.toolbar);
         final FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
         final CardView card1 = (CardView)findViewById(R.id.card1);
@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, InfoActivity.class));
