@@ -114,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return true;
+            }
+        });
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
