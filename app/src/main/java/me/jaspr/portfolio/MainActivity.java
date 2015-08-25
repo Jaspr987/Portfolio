@@ -1,6 +1,11 @@
 package me.jaspr.portfolio;
 
+import android.app.ActivityManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
+
+import com.github.florent37.materialimageloading.MaterialImageLoading;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,8 +35,12 @@ public class MainActivity extends AppCompatActivity {
         final CardView card1 = (CardView)findViewById(R.id.card1);
         final CardView card2 = (CardView)findViewById(R.id.card2);
         final CardView card3 = (CardView)findViewById(R.id.card3);
+        final ImageView imageView = (ImageView)findViewById(R.id.backdrop);
 
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
+        //Using Material Image Loading Animation When Launching
+        MaterialImageLoading.animate(imageView).setDuration(2000).start();
+
+        final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle(name);
         collapsingToolbarLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -59,13 +71,32 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+                startActivity(new Intent(Intent.ACTION_SENDTO).setData(Uri.parse("mailto:wang@jaspr.me")));
+            }
+        });
+        fab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Snackbar.make(collapsingToolbarLayout, "Email Me", Snackbar.LENGTH_LONG)
+                        .show();
+                return true;
             }
         });
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_logo);
+
+        //Drawable to Bitmap
+        Drawable drawable = getDrawable(R.drawable.ic_logo);
+        BitmapDrawable bitmapDrawable = (BitmapDrawable)drawable;
+        Bitmap recentIcon = bitmapDrawable.getBitmap();
+        String recentTitle = getString(R.string.recent_title);
+        int recentColor = getColor(R.color.orange_primary);
+
+        //Set Recent Screen Windows Title, Icon and Color
+        ActivityManager.TaskDescription  description = new ActivityManager.TaskDescription(recentTitle, recentIcon, recentColor);
+        this.setTaskDescription(description);
     }
 
     @Override
