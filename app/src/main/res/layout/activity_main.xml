@@ -29,14 +29,8 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/head"
                 android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="128dp"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/gradient"
-                app:layout_collapseMode="parallax"/>
+                app:layout_collapseMode="parallax"
+                android:foreground="@drawable/gradient"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -65,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/card_margin"
+                app:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/card1">
@@ -97,6 +92,7 @@
                 android:layout_marginBottom="@dimen/card_margin"
                 android:layout_marginLeft="@dimen/card_margin"
                 android:layout_marginRight="@dimen/card_margin"
+                app:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/card2">
@@ -129,6 +125,7 @@
                 android:layout_marginBottom="@dimen/card_margin"
                 android:layout_marginLeft="@dimen/card_margin"
                 android:layout_marginRight="@dimen/card_margin"
+                app:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/card3">

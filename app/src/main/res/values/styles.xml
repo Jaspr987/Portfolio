@@ -17,7 +17,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="AppTheme.Transparent" parent="Base.AppTheme">
+    <style name="Transparent.AppTheme" parent="Base.AppTheme">
 
     </style>
 
@@ -25,6 +25,7 @@
         <item name="colorPrimary">@color/orange_primary</item>
         <item name="android:colorPrimaryDark">@color/orange_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorPrimary">@color/color_accent</item>
     </style>
 
 </resources>

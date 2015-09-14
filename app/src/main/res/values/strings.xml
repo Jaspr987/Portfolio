@@ -13,5 +13,11 @@
   <string name="experiences_title">Experiences</string>
   <string name="works_title">Works</string>
   <string name="recent_title">Portfolio</string>
+  <string name="work_title_1">work 1</string>
+  <string name="work_description_1">work description work description work description work description work description</string>
+  <string name="work_title_2">work 2</string>
+  <string name="work_description_2">work description work description work description work description work description</string>
+  <string name="work_title_3">work 3</string>
+  <string name="work_description_3">work description work description work description work description work description</string>
 
 </resources>

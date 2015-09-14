@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView imageView = (ImageView)findViewById(R.id.backdrop);
 
         //Using Material Image Loading Animation When Launching
-        MaterialImageLoading.animate(imageView).setDuration(2000).start();
+        //MaterialImageLoading.animate(imageView).setDuration(2000).start();
 
         final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle(name);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, InfoActivity.class));
+                startActivity(new Intent(MainActivity.this, WorksActivity.class));
             }
         });
 
